@@ -96,7 +96,7 @@ void ServoAction(){
   Serial.print(DHT.humidity);
   Serial.print(" temp:");
   Serial.println(DHT.temperature);
-  float lux = lightMeter.readLightLevel();
+  int lux = lightMeter.readLightLevel(); //Set as 'float' by deafult displays the incorrect Temp on the LCD display. (int fixes) 
   Serial.print("Light: ");
   Serial.print(lux);
   Serial.println(" lx");
